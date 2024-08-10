@@ -1,0 +1,153 @@
+/* reset css */
+@import url(./reset.css);
+
+/* Root variables */
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+/* body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-color: var(--Pale-blue);
+  height: 100%;
+  padding: 3em;
+  gap: 0.5em;
+}
+
+main {
+  background-color: var(--Very-pale-blue);
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+
+  /* display: flex;
+  flex-direction: column; */
+  width: 30%;
+  height: auto;
+  align-self: center;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--Dark-blue);
+}
+.imgdiv {
+  position: relative;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+}
+.textdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+}
+.textdiv .descrip {
+  text-align: center;
+}
+
+.descrip h1 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding-bottom: 0.4em;
+}
+article,
+p {
+  color: var(--Desaturated-blue);
+}
+
+.subscrip {
+  background-color: hsla(225, 100%, 94%, 0.49);
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  padding: 0.8em;
+  font-size: 0.9rem;
+}
+/* .subscrip img {
+  width: em;
+  height: 100%;
+  background-color: blueviolet;
+} */
+.subscrip img {
+  width: 80%;
+  height: 100%;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  align-self: center;
+}
+.price h3 {
+  font-weight: 700;
+}
+.subscrip a {
+  align-self: center;
+  padding-left: 50%;
+  color: var(--Bright-blue);
+}
+
+/* styling button*/
+.btn {
+  display: flex;
+  flex-direction: column;
+}
+.btn button {
+  background-color: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  font-size: 0.8rem;
+  padding: 1.5em 0;
+
+  border: none;
+}
+.btn a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  padding-top: 0.5em;
+  font-size: 0.8rem;
+}
+
+/* border radius */
+.border-radius {
+  border-radius: 7px;
+}
+
+/* active state */
+a,
+button {
+  cursor: pointer;
+}
+
+/* mobile device */
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(../images/pattern-background-mobile.svg);
+    padding-top: 5em;
+  }
+  main {
+    width: 90vw;
+    height: auto;
+  }
+}
+
+/* styling for ipad and tablets */
+@media screen and (max-width: 1033px) and (min-width: 603px) {
+  body {
+    background-image: url(../images/pattern-background-mobile.svg);
+    padding-top: 5em;
+  }
+  main {
+    width: 50vw;
+    height: auto;
+  }
+}
